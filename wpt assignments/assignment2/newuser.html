@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    
+<body>
+
+<h2>New User Registration</h2>
+
+Name : <input type="text" id="name"><br><br>
+Email : <input type="text" id="email"><br><br>
+Age : <input type="number" id="age"><br><br>
+
+<button onclick="showData()">Register</button>
+
+<br><br>
+
+<div id="result"></div>
+
+</body>
+
+<script type="text/javascript">
+function showData()
+{
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let age = document.getElementById("age").value;
+
+    let table = "<table border='1' cellpadding='10'>";
+    
+    table += "<tr><th>Name</th><th>Email</th><th>Age</th></tr>";
+    table += "<tr>";
+    table += "<td>" + name + "</td>";
+    table += "<td>" + email + "</td>";
+    table += "<td>" + age + "</td>";
+    table += "</tr>";
+    
+    table += "</table>";
+
+    document.getElementById("result").innerHTML = table;
+}
+</script>
+</html>
+

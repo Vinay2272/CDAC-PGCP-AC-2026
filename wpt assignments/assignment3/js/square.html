@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num">Enter Number:<input type="number" id="num"></label>
+    <br><br>
+    <button onclick="findsquare()">Find square</button>
+    <p id="result"></p>
+</body>
+<script type="text/javascript">
+
+    function findsquare(){
+
+        let number=document.getElementById("num").value;
+
+        document.getElementById("result").innerHTML="result is :"+ number*number;
+    }
+
+</script>
+</html>
