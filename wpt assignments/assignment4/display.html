@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<label>Enter data: <input type="text" id="txt"></label>
+<br><br>
+<button onclick="addItem()">Add</button>
+<button onclick="showItems()">Display</button>
+
+<div id="output"></div>
+
+</body>
+
+<script type="text/javascript">
+let arr = [];
+
+function addItem()
+{
+    let data = document.getElementById("txt").value;
+    arr.push(data);
+}
+
+function showItems()
+{
+    let list = "<ul>";
+
+    for(let i=0;i<arr.length;i++)
+    {
+        list += "<li>" + arr[i] + "</li>";
+    }
+
+    list += "</ul>";
+
+    document.getElementById("output").innerHTML = list;
+}
+</script>
+
+</html>
+

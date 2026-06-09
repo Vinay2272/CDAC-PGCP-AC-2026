@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="email1">Enter email :<input type="email" id="email1"></label>
+    <br><br>
+    <button onclick="validate()"> submit</button>
+    
+</body>
+
+<script>
+function validate() { 
+    var data = document.getElementById("email1").value;
+    
+    var i = data.indexOf('@');
+    if (i > 0) {
+        var j = data.lastIndexOf('.');
+        if (j > i) {
+            console.log("Valid Format");
+        }
+        else {
+            console.log("Invalid Format ");
+        }
+    }
+    else {
+        console.log("Invalid Format ");
+    }
+}
+</script>
+
+</html>
