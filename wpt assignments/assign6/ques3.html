@@ -1,0 +1,17 @@
+<script>
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+Person.prototype.print = function() {
+    console.log("Name: " + this.name + ", Age: " + this.age);
+};
+
+let p1 = new Person("Vinay", 20);
+let p2 = new Person("Rahul", 22);
+
+p1.print();
+p2.print();
+</script>
