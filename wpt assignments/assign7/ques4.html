@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+Enter Number: <input type="number" id="num">
+<p id="result"></p>
+
+<script>
+$(document).ready(function() {
+
+    $("#num").change(function() {
+        let n = parseInt($(this).val());
+        let fact = 1;
+
+        for (let i = 1; i <= n; i++) {
+            fact *= i;
+        }
+
+        $("#result").text("Factorial: " + fact);
+    });
+
+});
+</script>
+
+</body>
+</html>

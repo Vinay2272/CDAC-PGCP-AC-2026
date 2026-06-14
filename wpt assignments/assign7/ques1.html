@@ -1,0 +1,23 @@
+<script>
+let arr = [10, 15, 22, 7, 8, 13, 40, 55, 2, 19];
+
+
+console.log("Original Array: ", arr);
+
+
+let even = arr.filter(function(num) {
+    return num % 2 === 0;
+});
+console.log("Even Numbers: ", even);
+
+
+let odd = arr.filter(function(num) {
+    return num % 2 !== 0;
+});
+console.log("Odd Numbers: ", odd);
+
+let sorted = arr.slice().sort(function(a, b) {
+    return a - b;
+});
+console.log("Sorted Array: ", sorted);
+</script>
