@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Data</title>
+</head>
+<body>
+
+Student ID: <input type="text" id="sid"><br><br>
+Student Name: <input type="text" id="sname"><br><br>
+
+<button onclick="addData()">Add</button>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody id="tableData"></tbody>
+</table>
+
+<script>
+let students = [];
+
+function addData() {
+    let id = document.getElementById("sid").value;
+    let name = document.getElementById("sname").value;
+
+    let obj = {
+        id: id,
+        name: name
+    };
+
+    students.push(obj);
+
+    let output = "";
+
+    students.forEach(function(s) {
+        output += "<tr>";
+        output += "<td>" + s.id + "</td>";
+        output += "<td>" + s.name + "</td>";
+        output += "</tr>";
+    });
+
+    document.getElementById("tableData").innerHTML = output;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Calculator</title>
+</head>
+<body>
+
+<input type="date" id="dob">
+<button onclick="getAge()">Get Age</button>
+
+<p id="age"></p>
+
+<script>
+function getAge() {
+    let dob = new Date(document.getElementById("dob").value);
+    let today = new Date();
+
+    let age = today.getFullYear() - dob.getFullYear();
+    let m = today.getMonth() - dob.getMonth();
+
+    if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+        age--;
+    }
+
+    document.getElementById("age").innerHTML = age;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Load Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<button id="btn">Load Content</button>
+
+<div id="result"></div>
+
+<script>
+$(document).ready(function() {
+    $("#btn").click(function() {
+        $("#result").load("data.html");
+    });
+});
+</script>
+
+</body>
+</html>
