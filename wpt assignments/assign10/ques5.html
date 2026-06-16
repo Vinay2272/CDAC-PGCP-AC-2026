@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="number" id="len">
+<button onclick="gen()">Generate</button>
+
+<p id="out"></p>
+
+<script>
+function gen() {
+    let l = document.getElementById("len").value;
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$";
+    let pass = "";
+
+    for (let i = 0; i < l; i++) {
+        pass += str.charAt(Math.floor(Math.random() * str.length));
+    }
+
+    document.getElementById("out").innerHTML = pass;
+}
+</script>
+
+</body>
+</html>

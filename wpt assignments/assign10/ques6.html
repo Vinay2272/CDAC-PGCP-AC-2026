@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="fname" placeholder="First Name"><br><br>
+<input type="text" id="lname" placeholder="Last Name"><br><br>
+<input type="date" id="dob"><br><br>
+
+<button onclick="gen()">Generate Username</button>
+
+<p id="res"></p>
+
+<script>
+function gen() {
+    let f = document.getElementById("fname").value;
+    let l = document.getElementById("lname").value;
+    let d = new Date(document.getElementById("dob").value);
+    let t = new Date();
+
+    let age = t.getFullYear() - d.getFullYear();
+    let m = t.getMonth() - d.getMonth();
+
+    if (m < 0 || (m === 0 && t.getDate() < d.getDate())) {
+        age--;
+    }
+
+    let uname = f.substring(0,2) + age + l.substring(l.length-2);
+    document.getElementById("res").innerHTML = uname;
+}
+</script>
+
+</body>
+</html>
