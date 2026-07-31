@@ -1,0 +1,10 @@
+CREATE DATABASE productdb;
+
+USE productdb;
+
+CREATE TABLE product(
+    productid INT PRIMARY KEY,
+    pname VARCHAR(50),
+    price DOUBLE,
+    qty INT
+);
