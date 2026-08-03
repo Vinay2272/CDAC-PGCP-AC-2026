@@ -1,0 +1,26 @@
+
+Q)Create user table in mysql to store username, address, mobile and email. Add 10 records in the table
+
+CREATE DATABASE userdb;
+
+USE userdb;
+
+CREATE TABLE users(
+    username VARCHAR(50),
+    address VARCHAR(100),
+    mobile VARCHAR(15),
+    email VARCHAR(50)
+);
+
+
+INSERT INTO users VALUES
+('Amit','Pune','9876543210','amit@gmail.com'),
+('Rohit','Mumbai','9876543211','rohit@gmail.com'),
+('Neha','Nashik','9876543212','neha@gmail.com'),
+('Priya','Nagpur','9876543213','priya@gmail.com'),
+('Kiran','Kolhapur','9876543214','kiran@gmail.com'),
+('Sneha','Satara','9876543215','sneha@gmail.com'),
+('Ajay','Solapur','9876543216','ajay@gmail.com'),
+('Pooja','Aurangabad','9876543217','pooja@gmail.com'),
+('Vikas','Sangli','9876543218','vikas@gmail.com'),
+('Meena','Thane','9876543219','meena@gmail.com');
